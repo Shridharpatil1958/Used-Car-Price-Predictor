@@ -1,0 +1,56 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Environment / secrets ---
+.env
+.env.local
+*.env
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Model artifacts (regenerate via src/train.py; keep repo lean) ---
+models/*.pkl
+models/*.joblib
+
+# Keep the small JSON metadata files that describe the trained model
+!models/encoders.json
+!models/feature_columns.json
+!models/metrics.json
+
+# --- Data (raw dataset can be large; keep processed lookups) ---
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# --- Generated reports/figures ---
+reports/figures/*.png
+!reports/figures/.gitkeep
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Testing / coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
